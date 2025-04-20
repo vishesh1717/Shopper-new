@@ -88,8 +88,10 @@ export const stripeWebhook = catchAsyncErrors(async (req, res, next) => {
       signature,
       process.env.STRIPE_WEBHOOK_SECRET
     );
+    console.log(event.type)
 
     if (event.type === "checkout.session.completed") {
+      console.log(line_items);
       const session = event.data.object;
 
       const line_items = await stripe.checkout.sessions.listLineItems(

@@ -5,6 +5,8 @@ import cookieParser from "cookie-parser";
 import { connectDatabase } from "./config/dbConnect.js";
 import errorMiddleware from "./middlewares/errors.js";
 
+import { stripeWebhook } from "./controllers/paymentControllers.js";
+
 import path from "path";
 // import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
@@ -34,17 +36,23 @@ app.use(
 );
 app.use(cookieParser());
 
+
 // Import all routes
 import productRoutes from "./routes/products.js";
 import authRoutes from "./routes/auth.js";
 import orderRoutes from "./routes/order.js";
 import paymentRoutes from "./routes/payment.js";
 import { fileURLToPath } from "url";
-
+app.post(
+  "/api/v1/payment/webhook",
+  express.raw({ type: "application/json" }),
+  stripeWebhook
+);
 app.use("/api/v1", productRoutes);
 app.use("/api/v1", authRoutes);
 app.use("/api/v1", orderRoutes);
 app.use("/api/v1", paymentRoutes);
+
 
 if (process.env.NODE_ENV === "PRODUCTION") {
   app.use(express.static(path.join(__dirname, "../frontend/build")));
