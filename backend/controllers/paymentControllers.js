@@ -40,6 +40,7 @@ export const stripeCheckoutSession = catchAsyncErrors(
       client_reference_id: req?.user?._id?.toString(),
       mode: "payment",
       metadata: { ...shippingInfo, itemsPrice: body?.itemsPrice },
+      billing_address_collection: "required",
       shipping_options: [
         {
           shipping_rate,
