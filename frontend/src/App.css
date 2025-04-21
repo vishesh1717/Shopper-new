@@ -33,8 +33,19 @@ nav {
 
 .navbar {
   padding: 0.1rem 1rem;
+  background-color: #eff5f5;
 }
-
+.navbar-nav{
+  border-radius: 6px;
+}
+.nav-link{
+  background-color: #00B7BD;
+  color: #f9f9f9;
+  border-radius: 6px;
+}
+.nav-item{
+  color: #00B7BD;
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -42,9 +53,11 @@ nav {
 }
 
 #search_btn {
-  background-color: #febd69;
+  background-color: #333333;
 }
-
+#search_btn i{
+  color: #ffffff;
+}
 .input-group {
   width: 90%;
   margin-right: 35%;
@@ -69,10 +82,8 @@ nav {
 }
 
 #cart_count {
-  background-color: #febd69;
   padding: 0.2rem 0.5rem;
   border-radius: 0.2rem;
-  color: black;
   font-weight: bold;
   font-size: 0.9rem;
 }
@@ -99,13 +110,16 @@ nav {
 .card-body {
   padding-left: 0;
 }
-
+.home-container{
+  display: flex;
+  gap: 20px;
+}
 .card-text {
   font-size: 1.4rem;
 }
 
 .card-img-top {
-  width: 200px;
+  /* width: 200px; */
   height: 150px;
 }
 
