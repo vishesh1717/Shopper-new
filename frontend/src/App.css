@@ -226,6 +226,9 @@ footer {
 #product_image {
   margin-top: 3rem;
 }
+.mt-2rem {
+  margin-top: 2rem;
+}
 
 /* Loader */
 .loader {
