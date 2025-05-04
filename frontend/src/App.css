@@ -38,13 +38,34 @@ nav {
 .navbar-nav{
   border-radius: 6px;
 }
-.nav-link{
+@media (max-width:768px) {
+  .navbar-nav{
+    gap: 16px;
+  }
+}
+.nav-link,.btn-shopper{
   background-color: #00B7BD;
   color: #f9f9f9;
   border-radius: 6px;
+  height: 40px;
+  width: 104px;
+  justify-content: center;
+}
+.btn-shopper{
+  background-color: #002F4B;
+  width: 90px;
 }
 .nav-item{
-  color: #00B7BD;
+  background-color: #00B7BD;
+  border-radius: 6px;
+}
+
+.offcanvas-backdrop.show{
+  opacity: 1;
+}
+.btn:hover,.nav-link:focus, .nav-link:hover{
+  background-color: #00B7BD;
+  color: #f9f9f9;
 }
 .dropdown {
   position: relative;
@@ -53,7 +74,7 @@ nav {
 }
 
 #search_btn {
-  background-color: #333333;
+  background-color: #002F4B;
 }
 #search_btn i{
   color: #ffffff;
@@ -71,7 +92,7 @@ nav {
 #login_btn,
 #view_btn,
 #new_review_btn {
-  background-color: #fa9c23;
+  background-color: #00B7BD;
   padding: 0.4rem 1.8rem;
   color: white;
 }
@@ -103,7 +124,7 @@ nav {
 }
 
 .card-title a:hover {
-  color: #fa9c23;
+  color: #00B7BD;
   text-decoration: none;
 }
 
@@ -161,7 +182,7 @@ footer {
 #cart_btn,
 #review_btn {
   border-radius: 2rem;
-  background-color: #fa9c23;
+  background-color: #002F4B;
   border: none;
   padding: 0.5rem 2rem;
 }
@@ -206,8 +227,8 @@ footer {
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid #fa9c23;
-  border-color: #fa9c23 transparent;
+  border: 6px solid #00B7BD;
+  border-color: #00B7BD transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {
@@ -246,15 +267,15 @@ footer {
 
 #checkout_btn,
 .review-btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #00B7BD;
+  border-color: #00B7BD;
   margin-top: 2rem;
   border-radius: 5rem;
 }
 
 #view_order_details {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #00B7BD;
+  border-color: #00B7BD;
 }
 
 #order_summary {
@@ -307,14 +328,14 @@ footer {
 
 .wrapper form .btn,
 .fetch-btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #00B7BD;
+  border-color: #00B7BD;
   color: white;
   margin-top: 1rem;
 }
 
 .fetch-btn:hover {
-  background-color: #fa9c23;
+  background-color: #00B7BD;
   color: white;
 }
 
@@ -354,8 +375,8 @@ footer {
 
 .avatar-nav {
   margin-right: 0.6rem;
-  height: 2.2rem;
-  width: 2.2rem;
+  height: 26.4px;
+  width: 26.5px;
 }
 
 /* Checkout Steps */
@@ -392,7 +413,7 @@ footer {
 }
 
 .active-step {
-  background: #fa9c23;
+  background: #00B7BD;
   color: #fff;
 }
 
@@ -400,7 +421,7 @@ footer {
   float: left;
   width: 0;
   border-top: 20px solid transparent;
-  border-left: 15px solid #fa9c23;
+  border-left: 15px solid #00B7BD;
   border-bottom: 20px solid transparent;
   margin-left: -1px;
 }
@@ -408,9 +429,9 @@ footer {
 .triangle2-active {
   width: 0;
   float: left;
-  border-top: 20px solid #fa9c23;
+  border-top: 20px solid #00B7BD;
   border-left: 15px solid #fff;
-  border-bottom: 20px solid #fa9c23;
+  border-bottom: 20px solid #00B7BD;
   margin-right: -1px;
 }
 
@@ -450,8 +471,8 @@ footer {
 }
 
 #edit_profile {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #00B7BD;
+  border-color: #00B7BD;
 }
 
 /* Confirm Order */
@@ -463,8 +484,8 @@ footer {
 
 .update-btn,
 #create_btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #00B7BD;
+  border-color: #00B7BD;
   color: white;
 }
 
@@ -474,16 +495,16 @@ footer {
 
 /* Pagination */
 .page-item.active .page-link {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #00B7BD;
+  border-color: #00B7BD;
 }
 
 .page-link {
-  color: #fa9c23;
+  color: #00B7BD;
 }
 
 .page-link:hover {
-  color: #fa9c23;
+  color: #00B7BD;
 }
 
 /* Products List Admin */
@@ -530,7 +551,7 @@ footer {
 }
 
 .orange {
-  color: #fa9c23;
+  color: #00B7BD;
 }
 
 .yellow {
@@ -552,8 +573,8 @@ footer {
 }
 
 #filter_form button {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #00B7BD;
+  border-color: #00B7BD;
 }
 
 .filter {
@@ -575,5 +596,5 @@ footer {
   background-color: #f3f4f6;
   border-color: #f3f4f6;
   border-radius: 0.3rem;
-  color: #fa9c23;
+  color: #00B7BD;
 }

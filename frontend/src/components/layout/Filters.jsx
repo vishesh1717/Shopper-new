@@ -4,7 +4,7 @@ import { getPriceQueryParams } from "../../helpers/helpers";
 import { PRODUCT_CATEGORIES } from "../../constants/constants";
 import StarRatings from "react-star-ratings";
 
-const Filters = () => {
+const Filters = ({ setShowMobileFilter, isMobile }) => {
   const [min, setMin] = useState(0);
   const [max, setMax] = useState(0);
 
@@ -54,6 +54,7 @@ const Filters = () => {
 
     const path = window.location.pathname + "?" + searchParams.toString();
     navigate(path);
+    setShowMobileFilter(false);
   };
 
   const defaultCheckHandler = (checkboxType, checkboxValue) => {
@@ -63,8 +64,16 @@ const Filters = () => {
   };
 
   return (
-    <div className="border p-3 filter">
-      <h3>Filters</h3>
+    <div className="border p-3 ">
+      <div className="d-flex align-items-center justify-content-between">
+        <h3>Filters</h3>
+        {isMobile && (
+          <button
+            className="btn-close"
+            onClick={() => setShowMobileFilter(false)}
+          ></button>
+        )}
+      </div>
       <hr />
       <h5 className="filter-heading mb-3">Price</h5>
       <form id="filter_form" className="px-2" onSubmit={handleButtonClick}>
@@ -134,7 +143,7 @@ const Filters = () => {
           <label className="form-check-label" for="check7">
             <StarRatings
               rating={rating}
-              starRatedColor="#ffb829"
+              starRatedColor="#002F4B"
               numberOfStars={5}
               name="rating"
               starDimension="21px"
