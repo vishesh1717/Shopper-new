@@ -112,7 +112,7 @@ const Home = () => {
             </div>
           )}
           <div className={`col-12 ${keyword ? "col-md-9" : "col-md-12"}`}>
-            <section id="products" className={!isMobile ? "mt-4" : ""}>
+            <section id="products" className={!isMobile ? "mt-2rem" : ""}>
               <div className="row">
                 {data?.products?.map((product) => (
                   <ProductItem product={product} columnSize={columnSize} />
