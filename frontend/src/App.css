@@ -42,6 +42,21 @@ nav {
   .navbar-nav{
     gap: 16px;
   }
+  .input-group {
+    width: 100%;
+    margin-right: 0;
+  }
+  .dropdown-menu.dropdown-menu-end{
+    border-top-right-radius: 0px;
+    border-top-left-radius:0px ;
+  }
+  .btn.dropdown-toggle{
+    justify-self: center;
+  }
+  .nav-item.dropdown{
+    text-align: center;
+  }
+  
 }
 .nav-link,.btn-shopper{
   background-color: #00B7BD;
@@ -83,6 +98,8 @@ nav {
   width: 90%;
   margin-right: 35%;
 }
+
+
 
 #search_field {
   height: 2.4rem;
@@ -207,7 +224,7 @@ footer {
 }
 
 #product_image {
-  margin-top: 9rem;
+  margin-top: 3rem;
 }
 
 /* Loader */

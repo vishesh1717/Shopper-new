@@ -80,6 +80,7 @@ const ProductDetails = () => {
       <MetaData title={product?.name} />
       <div className="row d-flex justify-content-around">
         <div className="col-12 col-lg-5 img-fluid" id="product_image">
+          <h1>{product?.name}</h1>
           <div className="p-3">
             <img
               className="d-block w-100"

@@ -70,7 +70,7 @@ const Header = () => {
             {user ? (
               <li className="nav-item dropdown me-3">
                 <button
-                  className="btn dropdown-toggle d-flex align-items-center"
+                  className="btn dropdown-toggle d-flex align-items-center  border-0"
                   id="userDropdown"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
