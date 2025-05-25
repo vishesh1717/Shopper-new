@@ -58,9 +58,9 @@ const Home = () => {
     if (isError) {
       toast.error(error?.data?.message);
     }
-  }, [isError]);
+  }, [isError, error?.data?.message]);
 
-  const columnSize = keyword ? 4 : 3;
+  const columnSize = keyword ? 6 : 3;
 
   if (isLoading) return <Loader />;
 
@@ -113,9 +113,13 @@ const Home = () => {
           )}
           <div className={`col-12 ${keyword ? "col-md-9" : "col-md-12"}`}>
             <section id="products" className={!isMobile ? "mt-2rem" : ""}>
-              <div className="row">
-                {data?.products?.map((product) => (
-                  <ProductItem product={product} columnSize={columnSize} />
+              <div className="row product-container">
+                {data?.products?.map((product, index) => (
+                  <ProductItem
+                    product={product}
+                    columnSize={columnSize}
+                    key={index}
+                  />
                 ))}
               </div>
             </section>

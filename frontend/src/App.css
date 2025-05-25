@@ -152,13 +152,26 @@ nav {
   display: flex;
   gap: 20px;
 }
+@media (min-width:768px){
+.product-card-container{
+  width: 331px;
+}
+
+}
+@media (min-width:768px) and (max-width: 1023px){
+.product-container{
+  justify-content: space-between;
+}
+
+}
+
 .card-text {
   font-size: 1.4rem;
 }
 
 .card-img-top {
   /* width: 200px; */
-  height: 150px;
+  height: 220px;
 }
 
 .ratings {

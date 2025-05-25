@@ -73,8 +73,8 @@ const Cart = () => {
                           width="115"
                         />
                       </div>
-                      <div className="col-5 col-lg-3">
-                        <Link to={`/products/${item?.product}`}>
+                      <div className="col-5 col-lg-3 fs-5">
+                        <Link to={`/product/${item?.product}`}>
                           {" "}
                           {item?.name}{" "}
                         </Link>

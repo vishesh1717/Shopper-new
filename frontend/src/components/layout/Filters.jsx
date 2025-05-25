@@ -108,8 +108,8 @@ const Filters = ({ setShowMobileFilter, isMobile }) => {
       <hr />
       <h5 className="mb-3">Category</h5>
 
-      {PRODUCT_CATEGORIES?.map((category) => (
-        <div className="form-check">
+      {PRODUCT_CATEGORIES?.map((category, index) => (
+        <div className="form-check" key={index}>
           <input
             className="form-check-input"
             type="checkbox"

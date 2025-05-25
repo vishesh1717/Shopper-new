@@ -7,7 +7,7 @@ import { delete_file, upload_file } from "../utils/cloudinary.js";
 
 // Create new Product   =>  /api/v1/products
 export const getProducts = catchAsyncErrors(async (req, res, next) => {
-  const resPerPage = 4;
+  const resPerPage = 6;
   const apiFilters = new APIFilters(Product, req.query).search().filters();
 
   let products = await apiFilters.query;
